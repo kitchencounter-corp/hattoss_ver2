@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class toss : MonoBehaviour
 {
-    private Rigidbody rb;
+    public static Rigidbody rb;
     private Transform hat;
     private Vector2 startswipe;
     private Vector2 endswipe;
@@ -13,7 +13,6 @@ public class toss : MonoBehaviour
     public screenmanager manager;
     private bool collide = true;
    
-   
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,7 +20,6 @@ public class toss : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -53,9 +51,9 @@ public class toss : MonoBehaviour
             if (other.tag == "+1") { score.Scr++; Debug.Log("+1"); }
             if (other.tag == "+2") { score.Scr = score.Scr + 2; Debug.Log("+2"); }
             if (other.tag == "+3") { score.Scr = score.Scr + 3; Debug.Log("+3"); }
-            //Debug.Log("freeze by collide");
+         
             Time.timeScale = 0f;
-           // Debug.Log("resetscreen by toss");
+         
             hat.position = new Vector3(-1.35f, 3.97f, -3.87f);
             hat.rotation = Quaternion.Euler(-90f, -90f, 0f);
             this.gameObject.SetActive(true);

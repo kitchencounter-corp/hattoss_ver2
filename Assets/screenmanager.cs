@@ -10,22 +10,14 @@ public class screenmanager : MonoBehaviour
     public GameObject scoreboard;
     public GameObject Hats;
     public Transform HatTranform;
-    //public static bool freeze = false;
-
-
-
-
-   /* public void gameover()
-    {
-        Debug.Log("gameover");
-        Gameover.SetActive(true);
-    } */
+   
     public void Playscreen()
     {
         Debug.Log("play");
         Playmenu.SetActive(false);
         Hats.SetActive(true);
         scoreboard.SetActive(true);
+       
     }
     public void Resetscreen()
     {
