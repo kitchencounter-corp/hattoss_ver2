@@ -25,8 +25,9 @@ public class screenmanager : MonoBehaviour
         scoreboard.SetActive(true);
         Gameover.SetActive(false);
         Time.timeScale = 0f;
-        HatTranform.position = new Vector3(-1.35f ,3.97f ,-3.87f);
-        HatTranform.rotation = Quaternion.Euler(-90f, -90f, 0f);
+        // HatTranform.position = new Vector3(-1.9f ,3.97f ,-3.87f);
+        //HatTranform.rotation = Quaternion.Euler(-90f, -90f, 0f);
+        toss.respawn(HatTranform);
     }
     public void Restartscreen()
     {
