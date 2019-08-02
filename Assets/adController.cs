@@ -1,30 +1,26 @@
-﻿
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Monetization;
+using UnityEngine.Advertisements;
 
 public class adController : MonoBehaviour
 {
-    private string store_id = "3237816";
-    private string bannder_id = "Banner";
+
+    public string gameId = "3237816";
+    public string placementId = "Banner";
     public bool testMode = true;
+
     void Start()
     {
-        Monetization.Initialize(store_id, testMode);
-      
+        Advertisement.Initialize(gameId, testMode);
+        StartCoroutine(ShowBannerWhenReady());
     }
 
-    
-   void Update()
+    IEnumerator ShowBannerWhenReady()
     {
-        if  (Monetization.IsReady(bannder_id))
+        while (!Advertisement.IsReady(placementId))
         {
-            ShowAdPlacementContent ad = null;
-            ad = Monetization.GetPlacementContent(bannder_id) as ShowAdPlacementContent;
-            if (ad != null)
-            {
-                ad.Show();
-            }
+            yield return new WaitForSeconds(0.5f);
         }
-
+        Advertisement.Banner.Show(placementId);
     }
 }
