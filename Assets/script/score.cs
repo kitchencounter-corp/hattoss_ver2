@@ -18,6 +18,7 @@ public class score : MonoBehaviour
         if (Scr > PlayerPrefs.GetInt("number", 0))
         {
             PlayerPrefs.SetInt("number", Scr);
+            PlayerPrefs.Save();
             Highscore.text = Scr.ToString();
         }
     }
