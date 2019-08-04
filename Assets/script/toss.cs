@@ -11,10 +11,11 @@ public class toss : MonoBehaviour
     public float force = 5f;
     public float torque = 5f;
     public screenmanager manager;
-    private bool collide = true;
+    private bool collidecheck = true;
 
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         hat = GetComponent<Transform>();
         Time.timeScale = 0f;
@@ -44,9 +45,9 @@ public class toss : MonoBehaviour
     }
     IEnumerator OnTriggerEnter(Collider other)
     {
-        collide = true;
+        collidecheck = true;
         yield return new WaitForSeconds(1f);
-        if (collide && other.tag != "Untagged")
+        if (collidecheck && other.tag != "Untagged")
         {
             if (other.tag == "+1") { score.Scr++; Debug.Log("+1"); }
             if (other.tag == "+2") { score.Scr = score.Scr + 2; Debug.Log("+2"); }
@@ -67,6 +68,7 @@ public class toss : MonoBehaviour
           //  manager.scoreboard.SetActive(false);
             manager.Gameover.SetActive(true);
             score.Scr = 0;
+                
             this.gameObject.SetActive(false);
 
         }
@@ -74,7 +76,7 @@ public class toss : MonoBehaviour
     }
     private void OnTriggerExit()
     {
-        collide = false;
+        collidecheck = false;
     }
     public static void respawn(Transform hat)
     {

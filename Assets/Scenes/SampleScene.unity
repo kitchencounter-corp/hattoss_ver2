@@ -1223,8 +1223,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameId: 3237816
-  placementId: Banner
+  bannerId: Banner
+  videoId: video
   testMode: 1
+  buybutton: {fileID: 2012858170}
 --- !u!1001 &625266865
 PrefabInstance:
   m_ObjectHideFlags: 0

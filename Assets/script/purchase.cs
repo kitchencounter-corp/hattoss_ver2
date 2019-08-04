@@ -4,7 +4,8 @@ using UnityEngine.Purchasing;
 
 public class purchase : MonoBehaviour
 {
-     public void BuyComplete(Product product)
+   
+    public void BuyComplete(Product product)
     {
         Debug.Log("purchase complete");
         PlayerPrefs.SetInt("adsremove", 1);
@@ -14,4 +15,5 @@ public class purchase : MonoBehaviour
     {
         Debug.Log("purchase failed");
     }
+   
 }
