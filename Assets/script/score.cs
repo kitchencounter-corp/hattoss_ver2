@@ -8,6 +8,7 @@ public class score : MonoBehaviour
      public TextMeshProUGUI scoreText;
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         scoreText = GetComponent<TextMeshProUGUI>();
         Highscore.text = PlayerPrefs.GetInt("number", 0).ToString();
 

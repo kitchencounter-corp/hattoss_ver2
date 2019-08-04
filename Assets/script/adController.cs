@@ -16,8 +16,9 @@ public class adController : MonoBehaviour
 
     void Start()
     {
-       
-        if (PlayerPrefs.HasKey("adsremove") == false)
+        string check = PlayerPrefs.GetString("key","X");
+        Debug.Log(check);
+        if (PlayerPrefs.HasKey(check) == false)
         {
 
             Advertisement.Initialize(gameId, testMode);
