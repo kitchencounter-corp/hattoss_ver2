@@ -61,7 +61,7 @@ public class adController : MonoBehaviour
     }
     private void Update()
     {
-        if (count ==5 && PlayerPrefs.HasKey("adsremove") == false )
+        if (count ==8 && PlayerPrefs.HasKey("adsremove") == false )
         {
             StartCoroutine(ShowAdWhenReady());
         }
