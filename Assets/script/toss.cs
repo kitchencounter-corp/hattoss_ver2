@@ -15,7 +15,7 @@ public class toss : MonoBehaviour
 
     void Start()
     {
-        
+        Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody>();
         hat = GetComponent<Transform>();
         Time.timeScale = 0f;
