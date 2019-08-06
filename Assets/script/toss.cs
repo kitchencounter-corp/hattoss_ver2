@@ -45,8 +45,10 @@ public class toss : MonoBehaviour
     }
     IEnumerator OnTriggerEnter(Collider other)
     {
+        Debug.Log("dính");
         collidecheck = true;
-        yield return new WaitForSeconds(1f);
+        Debug.Log(other.gameObject.tag);
+        yield return new WaitForSeconds(0.9f);
         if (collidecheck && other.tag != "Untagged")
         {
             if (other.tag == "+1") { score.Scr++; Debug.Log("+1"); }
@@ -56,6 +58,7 @@ public class toss : MonoBehaviour
             Time.timeScale = 0f;
             this.gameObject.SetActive(true);
             respawn(hat);
+            collidecheck = false;
         }
 
     }
@@ -77,10 +80,11 @@ public class toss : MonoBehaviour
     private void OnTriggerExit()
     {
         collidecheck = false;
+        
     }
     public static void respawn(Transform hat)
     {
-        hat.position = new Vector3(-1.5f, 3.97f, -3.87f);
+        hat.position = new Vector3(-1.5f, 3.97f, -4f);
         hat.eulerAngles = new Vector3(-120f, 90f, 0f);
     }
 }
