@@ -1137,7 +1137,7 @@ MonoBehaviour:
   gameId: 3237816
   bannerId: Banner
   videoId: video
-  testMode: 1
+  testMode: 0
   buybutton: {fileID: 2012858170}
   hat: {fileID: 0}
 --- !u!1001 &625266865

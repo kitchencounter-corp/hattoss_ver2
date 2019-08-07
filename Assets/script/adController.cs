@@ -12,7 +12,7 @@ public class adController : MonoBehaviour
     public bool testMode = true;
     public GameObject buybutton;
     public static int count = 0;
-    public GameObject hat;
+  //  public GameObject hat;
 
     void Start()
     {
