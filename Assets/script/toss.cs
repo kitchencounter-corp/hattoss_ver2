@@ -13,6 +13,9 @@ public class toss : MonoBehaviour
     private float magnitude;
     public screenmanager manager;
     private bool collidecheck = true;
+    private bool swiped = true;
+    private bool deadzone = false;
+    private float airtime;
 
     void Start()
     {
@@ -35,12 +38,18 @@ public class toss : MonoBehaviour
             endswipe = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             magnitude = (endswipe - startswipe).magnitude;
             Debug.Log(magnitude);
-            if (magnitude > 0.01f)
+            if (magnitude > 0.01f && swiped)
             {
-
+                swiped = false;
+                deadzone = true;
+                airtime = Time.time;
                 swipe();
             }
         }
+        if (Time.time - airtime > 3f && deadzone  )
+        {
+            restart();
+        } 
     }
     void swipe()
     {
@@ -59,6 +68,8 @@ public class toss : MonoBehaviour
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
         if (other.tag == "+3") { rb.velocity = Vector3.zero; }
+        deadzone = false;
+        
         yield return new WaitForSeconds(0.6f);
         if (collidecheck && other.tag != "Untagged")
         {
@@ -71,7 +82,7 @@ public class toss : MonoBehaviour
             this.gameObject.SetActive(false);
            this.gameObject.SetActive(true);
             respawn(hat);
-            
+            swiped = true;  
         }
 
     }
@@ -79,16 +90,19 @@ public class toss : MonoBehaviour
     {
         if (collide.gameObject.tag == "floor")
         {
-          //  Debug.Log("floor hit");
-            yield return new WaitForSeconds(1f);
-          //  manager.scoreboard.SetActive(false);
-            manager.Gameover.SetActive(true);
-            score.Scr = 0;
-                
-            this.gameObject.SetActive(false);
+            yield return new WaitForSeconds(1f);         
+            restart();
 
         }
 
+    }
+    void restart()
+    {
+        manager.Gameover.SetActive(true);
+        score.Scr = 0;
+        this.gameObject.SetActive(false);
+        deadzone = false;
+        swiped = true;
     }
     private void OnTriggerExit()
     {
