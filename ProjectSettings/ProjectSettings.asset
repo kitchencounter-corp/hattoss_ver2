@@ -244,7 +244,11 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
+<<<<<<< HEAD
   AndroidKeystoreName: 
+=======
+  AndroidKeystoreName: C:/Users/cdsyn/Documents/GitHub/hattosv2/user.keystore
+>>>>>>> parent of ea14438... Revert "shadow"
   AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

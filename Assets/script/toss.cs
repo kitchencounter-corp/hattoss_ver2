@@ -13,9 +13,14 @@ public class toss : MonoBehaviour
     private float magnitude;
     public screenmanager manager;
     private bool collidecheck = true;
+<<<<<<< HEAD
     private bool swiped = true;
     private bool deadzone = false;
     private float airtime;
+=======
+    private float airtime;
+    private bool swiped = true;
+>>>>>>> parent of ea14438... Revert "shadow"
 
     void Start()
     {
@@ -41,7 +46,10 @@ public class toss : MonoBehaviour
             if (magnitude > 0.01f && swiped)
             {
                 swiped = false;
+<<<<<<< HEAD
                 deadzone = true;
+=======
+>>>>>>> parent of ea14438... Revert "shadow"
                 airtime = Time.time;
                 swipe();
             }
@@ -69,10 +77,14 @@ public class toss : MonoBehaviour
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
         if (other.tag == "+3") { rb.velocity = Vector3.zero; }
+<<<<<<< HEAD
         rb.velocity = Vector3.zero;
         deadzone = false;
         yield return new WaitForSeconds(0.9f);
         Debug.Log("2" +collidecheck);
+=======
+        yield return new WaitForSeconds(1f);
+>>>>>>> parent of ea14438... Revert "shadow"
         if (collidecheck && other.tag != "Untagged")
         {
             if (other.tag == "+1") { score.Scr++; Debug.Log("cong1"); }
@@ -93,9 +105,13 @@ public class toss : MonoBehaviour
            this.gameObject.SetActive(true);
             respawn(hat);
 <<<<<<< HEAD
+<<<<<<< HEAD
             swiped = true;  
 =======
 >>>>>>> parent of 3815643... game play smooth hơn và lặt vặt
+=======
+            swiped = true;
+>>>>>>> parent of ea14438... Revert "shadow"
         }
 
     }
@@ -103,6 +119,7 @@ public class toss : MonoBehaviour
     {
         if (collide.gameObject.tag == "floor")
         {
+<<<<<<< HEAD
             yield return new WaitForSeconds(1f);         
             restart();
 
@@ -110,11 +127,30 @@ public class toss : MonoBehaviour
 
     }
     void restart()
+=======
+         
+           yield return new WaitForSeconds(1f);
+            Restart();
+           
+        } else
+        {
+            if (Time.time - airtime > 2f)
+            {
+                Restart();
+            }
+        }
+
+    }
+    void Restart()
+>>>>>>> parent of ea14438... Revert "shadow"
     {
         manager.Gameover.SetActive(true);
         score.Scr = 0;
         this.gameObject.SetActive(false);
+<<<<<<< HEAD
         deadzone = false;
+=======
+>>>>>>> parent of ea14438... Revert "shadow"
         swiped = true;
     }
     private void OnTriggerExit()
@@ -126,5 +162,6 @@ public class toss : MonoBehaviour
     {
         hat.position = new Vector3(-1.5f, 3.3f, -4.29f);
         hat.eulerAngles = new Vector3(-120f, 90f, 0f);
+        
     }
 }
