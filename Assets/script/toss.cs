@@ -13,6 +13,8 @@ public class toss : MonoBehaviour
     private float magnitude;
     public screenmanager manager;
     private bool collidecheck = true;
+    private float airtime;
+    private bool swiped = true;
 
     void Start()
     {
@@ -35,9 +37,10 @@ public class toss : MonoBehaviour
             endswipe = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             magnitude = (endswipe - startswipe).magnitude;
             Debug.Log(magnitude);
-            if (magnitude > 0.01f)
+            if (magnitude > 0.01f && swiped)
             {
-
+                swiped = false;
+                airtime = Time.time;
                 swipe();
             }
         }
@@ -59,7 +62,7 @@ public class toss : MonoBehaviour
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
         if (other.tag == "+3") { rb.velocity = Vector3.zero; }
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(1f);
         if (collidecheck && other.tag != "Untagged")
         {
             if (other.tag == "+1") { score.Scr++; Debug.Log("cong1"); }
@@ -71,7 +74,7 @@ public class toss : MonoBehaviour
             this.gameObject.SetActive(false);
            this.gameObject.SetActive(true);
             respawn(hat);
-            
+            swiped = true;
         }
 
     }
@@ -79,16 +82,25 @@ public class toss : MonoBehaviour
     {
         if (collide.gameObject.tag == "floor")
         {
-          //  Debug.Log("floor hit");
-            yield return new WaitForSeconds(1f);
-          //  manager.scoreboard.SetActive(false);
-            manager.Gameover.SetActive(true);
-            score.Scr = 0;
-                
-            this.gameObject.SetActive(false);
-
+         
+           yield return new WaitForSeconds(1f);
+            Restart();
+           
+        } else
+        {
+            if (Time.time - airtime > 2f)
+            {
+                Restart();
+            }
         }
 
+    }
+    void Restart()
+    {
+        manager.Gameover.SetActive(true);
+        score.Scr = 0;
+        this.gameObject.SetActive(false);
+        swiped = true;
     }
     private void OnTriggerExit()
     {
@@ -99,5 +111,6 @@ public class toss : MonoBehaviour
     {
         hat.position = new Vector3(-1.5f, 3.3f, -4.29f);
         hat.eulerAngles = new Vector3(-120f, 90f, 0f);
+        
     }
 }
