@@ -47,7 +47,7 @@ public class toss : MonoBehaviour
             }
         }
       
-            if (Time.time - airtime > 2f && deadzone)
+            if (Time.time - airtime > 2.5f && deadzone)
             {
                 airtime = Time.time;
                 Restart();
@@ -71,6 +71,7 @@ public class toss : MonoBehaviour
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
         if (other.tag == "+3") { rb.velocity = Vector3.zero; }
+        rb.velocity = Vector3.zero;
         deadzone = false;
         yield return new WaitForSeconds(1f);
         if (collidecheck && other.tag != "Untagged")
@@ -85,6 +86,7 @@ public class toss : MonoBehaviour
            this.gameObject.SetActive(true);
             respawn(hat);
             swiped = true;
+            rb.velocity = Vector3.zero;
         }
 
     }
@@ -109,6 +111,7 @@ public class toss : MonoBehaviour
         this.gameObject.SetActive(false);
         swiped = true;
         deadzone = false;
+        rb.velocity = Vector3.zero;
     }
     private void OnTriggerExit()
     {
