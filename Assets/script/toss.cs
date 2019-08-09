@@ -64,6 +64,7 @@ public class toss : MonoBehaviour
       //  Debug.Log("dính");
         collidecheck = true;
         Debug.Log(other.gameObject.tag);
+<<<<<<< HEAD
         Debug.Log("1" +collidecheck);
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
@@ -77,12 +78,24 @@ public class toss : MonoBehaviour
             if (other.tag == "+1") { score.Scr++; Debug.Log("cong1"); }
             if (other.tag == "+2") { score.Scr = score.Scr + 2; Debug.Log("cong2"); }
             if (other.tag == "+3") { score.Scr = score.Scr + 3; Debug.Log("cong3"); }   
+=======
+        Debug.Log(collidecheck);
+        yield return new WaitForSeconds(0.9f);
+        if (collidecheck)// && other.tag != "Untagged")
+        {
+            if (other.tag == "+1") { score.Scr++; Debug.Log("cong1"); }
+            if (other.tag == "+2") { score.Scr = score.Scr + 2; Debug.Log("cong2"); }
+            if (other.tag == "+3") { score.Scr = score.Scr + 3; Debug.Log("cong3"); }
+>>>>>>> parent of 3815643... game play smooth hơn và lặt vặt
             Debug.Log(score.Scr.ToString());
             Time.timeScale = 0f;
             this.gameObject.SetActive(false);
            this.gameObject.SetActive(true);
             respawn(hat);
+<<<<<<< HEAD
             swiped = true;  
+=======
+>>>>>>> parent of 3815643... game play smooth hơn và lặt vặt
         }
 
     }
