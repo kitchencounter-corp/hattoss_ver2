@@ -64,20 +64,19 @@ public class toss : MonoBehaviour
       //  Debug.Log("dính");
         collidecheck = true;
         Debug.Log(other.gameObject.tag);
-        Debug.Log(collidecheck);
+        Debug.Log("1" +collidecheck);
         if (other.tag == "+1") { rb.velocity = Vector3.zero; }
         if (other.tag == "+2") { rb.velocity = Vector3.zero; }
         if (other.tag == "+3") { rb.velocity = Vector3.zero; }
         rb.velocity = Vector3.zero;
         deadzone = false;
-        
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.9f);
+        Debug.Log("2" +collidecheck);
         if (collidecheck && other.tag != "Untagged")
         {
             if (other.tag == "+1") { score.Scr++; Debug.Log("cong1"); }
             if (other.tag == "+2") { score.Scr = score.Scr + 2; Debug.Log("cong2"); }
-            if (other.tag == "+3") { score.Scr = score.Scr + 3; Debug.Log("cong3"); }
-           
+            if (other.tag == "+3") { score.Scr = score.Scr + 3; Debug.Log("cong3"); }   
             Debug.Log(score.Scr.ToString());
             Time.timeScale = 0f;
             this.gameObject.SetActive(false);

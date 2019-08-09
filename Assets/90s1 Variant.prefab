@@ -206,22 +206,32 @@ PrefabInstance:
     - target: {fileID: 8183203716560291847, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.721
+      value: -0.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183203716560291847, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183203716560291847, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.512
       objectReference: {fileID: 0}
     - target: {fileID: 9175668423878909329, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3507353
+      value: 1.2696912
       objectReference: {fileID: 0}
     - target: {fileID: 9175668423878909329, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3507354
+      value: 1.2696913
       objectReference: {fileID: 0}
     - target: {fileID: 9175668423878909329, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7711574
+      value: 0.72488797
       objectReference: {fileID: 0}
     - target: {fileID: 9175668423878909329, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
@@ -231,22 +241,52 @@ PrefabInstance:
     - target: {fileID: 9175668423878909329, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.51
+      value: 0.429
       objectReference: {fileID: 0}
     - target: {fileID: 4865355991330803108, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.724
+      value: 0.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865355991330803108, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865355991330803108, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.516
       objectReference: {fileID: 0}
     - target: {fileID: 4998233177444853812, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.723
+      value: 0.672
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998233177444853812, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998233177444853812, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.508
       objectReference: {fileID: 0}
     - target: {fileID: 1884222483246348478, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.715
+      value: -0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884222483246348478, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884222483246348478, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.508
       objectReference: {fileID: 0}
     - target: {fileID: 8183117179742065775, guid: 6cd690c1e3e2bf840a634716ef09cff2,
         type: 3}
@@ -276,6 +316,11 @@ PrefabInstance:
     - target: {fileID: 657665492, guid: 6cd690c1e3e2bf840a634716ef09cff2, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475069935349731051, guid: 6cd690c1e3e2bf840a634716ef09cff2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.975
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd690c1e3e2bf840a634716ef09cff2, type: 3}
