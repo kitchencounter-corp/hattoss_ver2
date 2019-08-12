@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &4744515776384895975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500105827734205399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2, z: 0.8}
+  m_Center: {x: 0, y: 0, z: 0.5}
 --- !u!1001 &4816087543722610691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,17 +85,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
-      propertyPath: manager
-      value: 
+    - target: {fileID: 7689491631425653806, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.56
       objectReference: {fileID: 0}
-    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
-      propertyPath: force
-      value: 25
+    - target: {fileID: 72059604619459735, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.56
       objectReference: {fileID: 0}
-    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
-      propertyPath: torque
-      value: 99
+    - target: {fileID: 3681027247987472692, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877000250210704548, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5271975053716602133, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785590659686557246, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869230887859017377, guid: 13220f36074bd9c43b241b8da4f1d30f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8111147547524323652, guid: 13220f36074bd9c43b241b8da4f1d30f,
         type: 3}
@@ -94,35 +130,17 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7689491631425653806, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.56
+    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
+      propertyPath: manager
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3681027247987472692, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.56
+    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
+      propertyPath: force
+      value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 72059604619459735, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3877000250210704548, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785590659686557246, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5869230887859017377, guid: 13220f36074bd9c43b241b8da4f1d30f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 657665493, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
+      propertyPath: torque
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 72286294204014847, guid: 13220f36074bd9c43b241b8da4f1d30f,
         type: 3}
@@ -136,3 +154,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13220f36074bd9c43b241b8da4f1d30f, type: 3}
+--- !u!1 &6500105827734205399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1793327469513548756, guid: 13220f36074bd9c43b241b8da4f1d30f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4816087543722610691}
+  m_PrefabAsset: {fileID: 0}
