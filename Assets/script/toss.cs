@@ -93,7 +93,8 @@ public class toss : MonoBehaviour
     
     IEnumerator OnCollisionEnter(Collision collide)
     {
-       
+       // Vector3 vec = new Vector3(1, 1);
+      
         if (collide.gameObject.tag == "floor")
         {
             
@@ -101,7 +102,11 @@ public class toss : MonoBehaviour
             Restart();
            
            
-        } 
+        } else
+        {
+
+            rb.velocity = Vector3.zero;
+        }
        
     }
     void Restart()
