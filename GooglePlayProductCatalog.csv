@@ -1,0 +1,2 @@
+Product ID,Published State,Purchase Type,Auto Translate,Locale; Title; Description,Auto Fill Prices,Price,Pricing Template ID
+adsremove_playstore,published,managed_by_android,false,en_US;remove ads;remove advertisement,true,2000000,
