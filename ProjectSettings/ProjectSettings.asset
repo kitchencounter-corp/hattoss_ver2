@@ -155,7 +155,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.KitchenCounter.HatShot
   buildNumber: {}
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

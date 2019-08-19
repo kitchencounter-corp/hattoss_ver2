@@ -23,7 +23,9 @@ public class adController : MonoBehaviour
 
             Advertisement.Initialize(gameId, testMode);
             Monetization.Initialize(gameId, testMode);
+            Debug.Log("tao banner");
             StartCoroutine(ShowBannerWhenReady());
+            Debug.Log("tao ad");
             StartCoroutine(ShowAdWhenReady());
         }
         else
@@ -32,15 +34,33 @@ public class adController : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowBannerWhenReady()
-    {
-        while (!Advertisement.IsReady(bannerId))
+      private  IEnumerator ShowBannerWhenReady()
         {
-            yield return new WaitForSeconds(0.5f);
-        }
+            while (!Advertisement.IsReady(bannerId))
+            {
+                yield return new WaitForSeconds(0.25f);
+            }
         Debug.Log("showbanner");
-        Advertisement.Banner.Show(bannerId);
-    }
+            Advertisement.Banner.Show(bannerId);
+        }
+  /*  private IEnumerator ShowBannerWhenReady()
+    {
+        count = 0;
+        while (!Monetization.IsReady(bannerId))
+        {
+            yield return new WaitForSeconds(0f);
+        }
+
+        ShowAdPlacementContent ad = null;
+        ad = Monetization.GetPlacementContent(bannerId) as ShowAdPlacementContent;
+
+        if (ad != null)
+        {
+            Debug.Log("showBanner");
+            ad.Show();
+        }
+
+    }*/
     private IEnumerator ShowAdWhenReady()
     {
         count = 0;
@@ -59,7 +79,7 @@ public class adController : MonoBehaviour
         }
        
     }
-    private void Update()
+    void Update()
     {
         if (count ==8 && PlayerPrefs.HasKey("adsremove") == false )
         {
