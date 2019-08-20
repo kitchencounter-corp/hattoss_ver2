@@ -23,10 +23,10 @@ public class adController : MonoBehaviour
 
             Advertisement.Initialize(gameId, testMode);
             Monetization.Initialize(gameId, testMode);
-            Debug.Log("tao banner");
-            StartCoroutine(ShowBannerWhenReady());
-            Debug.Log("tao ad");
-            StartCoroutine(ShowAdWhenReady());
+          //  Debug.Log("tao banner");
+         //   StartCoroutine(ShowBannerWhenReady());
+          //  Debug.Log("tao ad");
+          //  StartCoroutine(ShowAdWhenReady());
         }
         else
         {
